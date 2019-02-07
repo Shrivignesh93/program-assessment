@@ -1,0 +1,84 @@
+.greyColorHeader {
+    color: grey;
+    font-size: 27px;
+}
+
+.greenColor {
+    color: #18C917;
+    font-weight: bold;
+}
+
+.blueColor {
+    color: #0B62A5;
+    font-weight: bold;
+}
+
+.headerTeaxt {
+    font-size: 24px;
+}
+
+.dropdown {
+    margin-top: 10px;
+}
+
+.blueColorBg {
+    background-color: #0B62A5;
+    color: white;
+    font-weight: bold;
+    height: 28px;
+    max-width: 100%;
+}
+
+.greenColorBg {
+    background-color: #18C917;
+    color: white;
+    font-weight: bold;
+    height: 28px;
+    max-width: 100%;
+}
+
+.fullHeightDiv {
+    height: 100%;
+}
+
+.fullWidthDiv {
+    width: 100%;
+}
+
+.leftSideDiv {
+    width: 30%;
+    float: left;
+}
+
+.rightSideDiv {
+    width: 70%;
+    float: left
+}
+
+.halfWidthDiv {
+    width: 50%;
+}
+
+#headerDiv {
+    height: 150px;
+}
+
+#dataDisplayDiv {
+    margin-top: 1%;
+}
+
+.channelsDisplay {
+    display: block;
+    float: left;
+    max-width: 50%;
+}
+
+.devicesDisplay {
+    display: block;
+    float: left;
+    max-width: 50%
+}
+.dataDivs {
+    margin-top: 1px;
+    height: 30px;
+}

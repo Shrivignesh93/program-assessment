@@ -1,0 +1,11 @@
+{
+  "name": "frontend-applicant-test",
+  "version": "1.0.0",
+  "description": "Programming test for Industry Weapon applicants",
+  "main": "index.html",
+  "author": "Industry Weapon",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.7"
+  }
+}

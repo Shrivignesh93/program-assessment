@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" class="fullHeightDiv">
+
+<head>
+    <link rel="stylesheet" href="dist/styles.css">
+    <title>Frontend Applicant Test</title>
+</head>
+
+<body ng-controller="appCtrl" class="fullHeightDiv">
+
+    <div class="fullHeightDiv">
+        <!-- header content that is displaying total channels and devices -->
+        <div id="headerDiv">
+            <h3 class="greyColorHeader">Content Report</h3>
+            <div class="fullWidthDiv">
+                <div class="leftSideDiv">
+                    <div class="blueColor headerTeaxt">Total Channel Count: {{totalChannels}}</div>
+                    <div class="greenColor headerTeaxt">Total Devices Count: {{totalDevices}}</div>
+                </div>
+                <!-- dropdown that displays states/countries -->
+                <div class="rightSideDiv">
+                    <select ng-change="dropdownChanged(selectedValue)" class="dropdown" ng-model="selectedValue">
+                        <option selected ng-repeat="state in data | orderBy: 'value.number'" ng-value="state.key">{{state.key}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="dataDisplayDiv">
+            <div lass="fullWidthDiv dataDivs" ng-if="!displayAll">
+                <!-- Elements displaying selected data only -->
+                <div class="leftSideDiv">{{selectedState}}</div>
+                <div class="rightSideDiv">
+                    <div class="halfWidthDiv">
+                        <span class="blueColorBg channelsDisplay" ng-style="{ 'width': ((selectedChannels/150)*100) + '%' }">
+                            {{selectedChannels}}</span>
+                        <span ng-style="{ 'width': ((selectedDevices/150)*100) + '%' }" class="greenColorBg devicesDisplay">{{selectedDevices}}</span>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="displayAll">
+                <!-- Elements displaying all states data -->
+                <div ng-repeat="state in data" class="fullWidthDiv dataDivs" >
+                    <div class="leftSideDiv">{{state.key}}</div>
+                    <div class="rightSideDiv">
+                        <div class="halfWidthDiv">
+                            <span class="blueColorBg channelsDisplay" ng-style="{ 'width': ((state.value.Channels/150)*100) + '%' }">
+                                {{state.value.Channels}}</span>
+                            <span ng-style="{ 'width': ((state.value.Devices/150)*100) + '%' }" class="greenColorBg devicesDisplay">{{state.value.Devices}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- scripts required -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="dist/app.js"></script>
+
+</body>
+
+</html>
